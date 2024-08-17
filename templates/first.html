@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: green;
+        }
+        a{
+            font-size: 50px;
+            display: inline-block;
+            list-style: none;
+            margin-right: 90px;
+            color: cornflowerblue;
+            text-decoration: none;
+        }
+
+        .header{
+            text-align: center;
+        }
+
+        h1{
+            font-size: 30px;
+            color: red;
+        }
+        p{
+            margin-right: 10px;
+        }
+        .list{
+            align-content: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/product">Product</a>
+    </div>
+    <h1>First Names</h1>
+    <h1 class="list">{% for item in products %}
+        <p>{{ item.firstname }}</p>
+        {% endfor %}
+    </h1>
+
+    <h1>Ages</h1>
+    <h1 class="list">{% for item in products %}
+        <p>{{ item.age }}</p>
+        {% endfor %}
+    </h1>
+
+
+    <h1>Last Names</h1>
+    <h1 class="list">{% for item in products %}
+        <p>{{ item.lastname }}</p>
+        {% endfor %}
+    </h1>
+
+    
+</body>
+</html>
