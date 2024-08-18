@@ -19,5 +19,5 @@ def product(request):
 
 
 class BigBoxViewSet(viewsets.ModelViewSet):
-    queryset = BigBox.objects.all()
     serializer_class = BigBoxSerializer
+    queryset = BigBox.objects.all()
