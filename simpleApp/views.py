@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.response import Response
 from .models import BigBox, Offer
-from .serializers import BigBoxSerializer
+from .serializers import BigBoxSerializer, OfferSerializer
 
 def index(request):
     products = BigBox.objects.all()
@@ -21,3 +21,7 @@ def product(request):
 class BigBoxViewSet(viewsets.ModelViewSet):
     serializer_class = BigBoxSerializer
     queryset = BigBox.objects.all()
+
+class OfferVievSet(viewsets.ModelViewSet):
+    serializer_class = OfferSerializer
+    queryset = Offer.objects.all()  
