@@ -6,7 +6,7 @@ class BigBox(models.Model):
     age = models.FloatField()
 
     def __str__(self):
-        return f"{self.firstname} {self.lastname} {self.age}"
+        return self.firstname
 
 
 
